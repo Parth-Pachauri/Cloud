@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
-const PORT=3000;
+const PORT=80;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
@@ -38,5 +38,5 @@ app.get("/", (req, res) => {
   return res.redirect('index.html');
 });
 app.listen(PORT, () => {
-  console.log("Listening on port 3000");
+  console.log("Listening on port 80");
 });
